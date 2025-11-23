@@ -1,26 +1,221 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #e6eff8;
   --foreground: #171717;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* 確定區 */
+@theme inline {
+  --font-bona-nova: var(--font-bona-nova); /* Bona Nova */
+  --font-inter: var(--font-inter); /* Inter */
 }
+@theme inline {
+  --font-heading: var(--font-bona-nova);
+  --font-body: var(--font-inter);
+}
+/* 確定區 */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
 }
+
+/* 如果想讓標題自動用 Bona Nova，加這一段（可選，但很推） */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-bona-nova), serif;
+}
+
+@utility type-heading-h1 {
+  /* H1: Desktop ≈ 84px → text-7xl, Mobile ≈ 48px → text-5xl */
+  @apply font-heading font-normal text-7xl leading-[110%] tracking-[-0.01em] max-sm:text-5xl;
+}
+
+@utility type-heading-h2 {
+  /* H2: Desktop 60px → text-6xl, Mobile 約 36~44px → text-4xl 做階層 */
+  @apply font-heading font-normal text-6xl leading-[120%] tracking-[-0.01em] max-sm:text-4xl;
+}
+
+@utility type-heading-h3 {
+  /* H3: Desktop 48px → text-5xl, Mobile 約 32px → text-3xl */
+  @apply font-heading font-normal text-5xl leading-[120%] tracking-[-0.01em] max-sm:text-3xl;
+}
+
+@utility type-heading-h4 {
+  /* H4: Desktop 約 40px → text-4xl, Mobile 24px → text-2xl */
+  @apply font-heading font-normal text-4xl leading-[130%] tracking-[-0.01em] max-sm:text-2xl;
+}
+
+@utility type-heading-h5 {
+  /* H5: Desktop 約 32px → text-3xl, Mobile 20px → text-xl */
+  @apply font-heading font-normal text-3xl leading-[130%] tracking-[-0.01em] max-sm:text-xl;
+}
+
+@utility type-heading-h6 {
+  /* H6: Desktop 約 26px → text-2xl, Mobile 18px → text-lg */
+  @apply font-heading font-normal text-2xl leading-[140%] tracking-[-0.01em] max-sm:text-lg;
+}
+
+/* TEXT LARGE (≈ 26px → text-2xl) */
+@utility type-text-large-extrabold {
+  @apply font-body text-2xl leading-[150%] font-extrabold;
+}
+
+@utility type-text-large-bold {
+  @apply font-body text-2xl leading-[150%] font-bold;
+}
+
+@utility type-text-large-semibold {
+  @apply font-body text-2xl leading-[150%] font-semibold;
+}
+
+@utility type-text-large-medium {
+  @apply font-body text-2xl leading-[150%] font-medium;
+}
+
+@utility type-text-large-normal {
+  @apply font-body text-2xl leading-[150%] font-normal;
+}
+
+@utility type-text-large-light {
+  @apply font-body text-2xl leading-[150%] font-light;
+}
+
+/* TEXT MEDIUM (20px → text-xl) */
+@utility type-text-medium-extrabold {
+  @apply font-body text-xl leading-[150%] font-extrabold;
+}
+
+@utility type-text-medium-bold {
+  @apply font-body text-xl leading-[150%] font-bold;
+}
+
+@utility type-text-medium-semibold {
+  @apply font-body text-xl leading-[150%] font-semibold;
+}
+
+@utility type-text-medium-medium {
+  @apply font-body text-xl leading-[150%] font-medium;
+}
+
+@utility type-text-medium-normal {
+  @apply font-body text-xl leading-[150%] font-normal;
+}
+
+@utility type-text-medium-light {
+  @apply font-body text-xl leading-[150%] font-light;
+}
+
+/* TEXT REGULAR (18px → text-lg) */
+@utility type-text-regular-extrabold {
+  @apply font-body text-lg leading-[150%] font-extrabold;
+}
+
+@utility type-text-regular-bold {
+  @apply font-body text-lg leading-[150%] font-bold;
+}
+
+@utility type-text-regular-semibold {
+  @apply font-body text-lg leading-[150%] font-semibold;
+}
+
+@utility type-text-regular-medium {
+  @apply font-body text-lg leading-[150%] font-medium;
+}
+
+@utility type-text-regular-normal {
+  @apply font-body text-lg leading-[150%] font-normal;
+}
+
+@utility type-text-regular-light {
+  @apply font-body text-lg leading-[150%] font-light;
+}
+
+/* TEXT SMALL (16px → text-base) */
+@utility type-text-small-extrabold {
+  @apply font-body text-base leading-[150%] font-extrabold;
+}
+
+@utility type-text-small-bold {
+  @apply font-body text-base leading-[150%] font-bold;
+}
+
+@utility type-text-small-semibold {
+  @apply font-body text-base leading-[150%] font-semibold;
+}
+
+@utility type-text-small-medium {
+  @apply font-body text-base leading-[150%] font-medium;
+}
+
+@utility type-text-small-normal {
+  @apply font-body text-base leading-[150%] font-normal;
+}
+
+@utility type-text-small-light {
+  @apply font-body text-base leading-[150%] font-light;
+}
+
+/* TEXT TINY (12px → text-xs) */
+@utility type-text-tiny-extrabold {
+  @apply font-body text-xs leading-[150%] font-extrabold;
+}
+
+@utility type-text-tiny-bold {
+  @apply font-body text-xs leading-[150%] font-bold;
+}
+
+@utility type-text-tiny-semibold {
+  @apply font-body text-xs leading-[150%] font-semibold;
+}
+
+@utility type-text-tiny-medium {
+  @apply font-body text-xs leading-[150%] font-medium;
+}
+
+@utility type-text-tiny-normal {
+  @apply font-body text-xs leading-[150%] font-normal;
+}
+
+@utility type-text-tiny-light {
+  @apply font-body text-xs leading-[150%] font-light;
+}
+
+/* @layer base {
+  * {
+    @apply  
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  main {
+    @apply mx-auto container flex flex-col sm:px-10 px-5 py-10;
+  }
+
+  h1 {
+    @apply text-gradient text-6xl font-semibold max-sm:text-4xl;
+  }
+
+  h3 {
+    @apply font-schibsted-grotesk text-2xl font-bold;
+  }
+
+  ul {
+    @apply list-disc list-inside;
+  }
+}
+
+ */

@@ -1,0 +1,49 @@
+frontend
+├── README.md
+├── app
+│   ├── (portfolio)
+│   │   ├── design
+│   │   │   └── page.tsx
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── project
+│   │   │   └── page.tsx
+│   │   └── unkwown
+│   ├── (root)
+│   │   ├── about
+│   │   │   └── page.tsx
+│   │   ├── blog
+│   │   │   └── page.tsx
+│   │   ├── contact
+│   │   │   └── page.tsx
+│   │   └── resume
+│   │       └── page.tsx
+│   ├── error.tsx
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components
+│   ├── Banner.tsx
+│   ├── Button.tsx
+│   ├── DesignSystem.tsx
+│   ├── Footer.tsx
+│   ├── Hero.tsx
+│   ├── Navbar.tsx
+│   ├── NewsletterSection.tsx
+│   ├── ProjectsSection.tsx
+│   ├── QuestionsSection.tsx
+│   └── ServiceCardSet.tsx
+├── eslint.config.mjs
+├── next-env.d.ts
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── tree.txt
+└── tsconfig.json
