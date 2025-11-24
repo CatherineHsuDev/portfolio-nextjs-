@@ -90,21 +90,12 @@ const Hero = () => {
               className="
     relative overflow-hidden
     sm:flex-1 inline-flex justify-center rounded-full
-    bg-blue-600 px-6 py-2.5 text-sm font-medium text-white
-    shadow-sm hover:bg-blue-700 transition-colors group
+    bg-blue-600 px-6 py-2.5 text-sm font-medium text-white shadow-sm
   "
             >
               <span className="relative z-10">{t.primaryCta}</span>
 
-              <span
-                className="
-      absolute inset-0 
-      bg-gradient-to-r from-white/10 via-white/20 to-white/10
-      translate-x-[-100%]
-      group-hover:translate-x-[100%]
-      transition-transform duration-700
-    "
-              />
+              <span className="shimmer absolute inset-0" />
             </Link>
 
             <Link
