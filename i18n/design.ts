@@ -18,19 +18,18 @@ export const designTranslations: Dict<{
     sectionTitle: "Systems that work",
     sectionSubtitle:
       "Accessible, responsive interfaces built on solid foundations",
-
     cards: [
       {
         label: "Accessibility",
         title: "Interfaces built for everyone",
         desc: "WCAG standards, semantic HTML, keyboard navigation",
-        imageSrc: "/project/wireframe.png",
+        imageSrc: "https://catherinehsu.netlify.app/project/wireframe.png",
       },
       {
         label: "Color",
         title: "Palettes that guide the eye",
         desc: "Contrast, harmony, and intention in every shade",
-        imageSrc: "/project/color.png",
+        imageSrc: "https://catherinehsu.netlify.app/project/color.png",
       },
       {
         label: "Layout",
