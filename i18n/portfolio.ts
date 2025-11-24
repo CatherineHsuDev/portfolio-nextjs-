@@ -81,7 +81,7 @@ export const projectItems: Dict<ProjectItem[]> = {
       description:
         "A full-stack course management portal with a React + Vite frontend and a Node.js/Express API backend, featuring JWT-based auth, Google login, and MongoDB for persistent storage.",
       image: "/project/course.png",
-      github: "https://github.com/yourname/course-portal",
+      github: "https://github.com/CatherineHsuDev/coursePortal-backend",
       story: "/portfolio/project/course-portal-story",
       tags: [
         "React",
@@ -135,7 +135,7 @@ export const projectItems: Dict<ProjectItem[]> = {
       description:
         "全端課程管理平台，前端使用 React + Vite、後端使用 Node.js/Express，支援 JWT、Google 登入與 MongoDB。",
       image: "/project/course.png",
-      github: "https://github.com/yourname/course-portal",
+      github: "https://github.com/CatherineHsuDev/coursePortal-backend",
       story: "/portfolio/project/course-portal-story",
       tags: [
         "React",
