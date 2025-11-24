@@ -69,7 +69,7 @@ const DesignSystems = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="rounded-2xl border border-gray-200 bg-[#f5f7ff] p-6 flex flex-col">
+          <div className="rounded-2xl border border-gray-200 bg-[#f5f7ff] p-6 flex flex-col justify-center md:justify-start">
             <span className="text-xs uppercase tracking-wide text-gray-500">
               {t.cards[2].label}
             </span>
@@ -80,7 +80,7 @@ const DesignSystems = () => {
           </div>
 
           {/* Card 4 */}
-          <div className="rounded-2xl border border-gray-200 bg-[#f5f7ff] p-6 flex flex-col">
+          <div className="rounded-2xl border border-gray-200 bg-[#f5f7ff] p-6 flex flex-col justify-center md:justify-start">
             <span className="text-xs uppercase tracking-wide text-gray-500">
               {t.cards[3].label}
             </span>

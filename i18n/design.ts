@@ -24,7 +24,7 @@ export const designTranslations: Dict<{
         label: "Accessibility",
         title: "Interfaces built for everyone",
         desc: "WCAG standards, semantic HTML, keyboard navigation",
-        imageSrc: "/project/figma.png",
+        imageSrc: "/project/wireframe.png",
       },
       {
         label: "Color",
