@@ -36,12 +36,12 @@ const DesignSystems = () => {
                 WCAG standards, semantic HTML, keyboard navigation
               </p>
 
-              <Link
+              {/* <Link
                 href="#"
                 className="mt-auto pt-4 inline-flex items-center gap-1 text-sm font-medium text-gray-900 hover:underline"
               >
                 Learn <span>›</span>
-              </Link>
+              </Link> */}
             </div>
 
             <img
@@ -64,12 +64,12 @@ const DesignSystems = () => {
                 Contrast, harmony, and intention in every shade
               </p>
 
-              <Link
+              {/* <Link
                 href="#"
                 className="mt-auto pt-4 inline-flex items-center gap-1 text-sm font-medium text-gray-900 hover:underline"
               >
                 Explore <span>›</span>
-              </Link>
+              </Link> */}
             </div>
 
             <div className="lg:w-1/2 w-full">
@@ -93,12 +93,12 @@ const DesignSystems = () => {
               Responsive layouts that adapt without breaking
             </p>
 
-            <Link
+            {/* <Link
               href="#"
               className="mt-auto pt-4 inline-flex items-center gap-1 text-sm font-medium text-gray-900 hover:underline"
             >
               Discover <span>›</span>
-            </Link>
+            </Link> */}
           </div>
 
           {/* Card 4 - 右下小卡 */}
@@ -113,12 +113,12 @@ const DesignSystems = () => {
               Clean hierarchies and patterns users understand
             </p>
 
-            <Link
+            {/* <Link
               href="#"
               className="mt-auto pt-4 inline-flex items-center gap-1 text-sm font-medium text-gray-900 hover:underline"
             >
               View <span>›</span>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

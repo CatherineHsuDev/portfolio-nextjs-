@@ -57,7 +57,7 @@ const ProjectsSection = () => {
               </div>
 
               <Link
-                href="#"
+                href="/portfolio/project"
                 className="mt-4 inline-flex items-center text-sm font-medium text-gray-900 hover:underline"
               >
                 View project <span className="ml-1">›</span>
@@ -96,7 +96,7 @@ const ProjectsSection = () => {
               </div>
 
               <Link
-                href="#"
+                href="/portfolio/project"
                 className="mt-4 inline-flex items-center text-sm font-medium text-gray-900 hover:underline"
               >
                 View project <span className="ml-1">›</span>
@@ -108,7 +108,7 @@ const ProjectsSection = () => {
         {/* View all */}
         <div className="mt-10 flex justify-center">
           <Link
-            href="/projects"
+            href="/portfolio/project"
             className="inline-flex items-center rounded-full border border-gray-300 bg-white px-5 py-2.5 text-xs md:text-sm font-medium text-gray-800 hover:bg-gray-50 transition-colors"
           >
             View all

@@ -3,8 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { portfolioTranslations } from "@/i18n";
+import { useLanguage } from "../LanguageProvider";
+
 const PortfolioNav = () => {
   const pathname = usePathname();
+  const { lang } = useLanguage();
+  const t = portfolioTranslations[lang];
 
   const isActive = (route: string) => pathname.startsWith(route);
 
@@ -23,7 +28,7 @@ const PortfolioNav = () => {
             }
           `}
         >
-          Projects
+          {t.navProject}
           <span
             className={`
               absolute left-0 -bottom-0.5 h-[2px] bg-[#2f88e1]
@@ -48,7 +53,7 @@ const PortfolioNav = () => {
             }
           `}
         >
-          Design
+          {t.navDesign}
           <span
             className={`
               absolute left-0 -bottom-0.5 h-[2px] bg-[#2f88e1]

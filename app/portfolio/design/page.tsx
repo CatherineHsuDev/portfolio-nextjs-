@@ -2,11 +2,11 @@
 
 const files = [
   "gallery-1.jpg",
-  "gallery-2.jpg",
-  "gallery-3.jpg",
-  "gallery-4.jpg",
-  "gallery-5.jpg",
-  "gallery-1.jpg", // 第 6 格暫時再用第一張
+  "gallery-2.png",
+  "gallery-3.png",
+  "gallery-4.png",
+  "gallery-5.png",
+  // "gallery-1.jpg", // 第 6 格暫時再用第一張
 ];
 
 export default function DesignPage() {
@@ -16,12 +16,12 @@ export default function DesignPage() {
         {/* Header */}
         <div className="mb-10">
           <h1 className="text-3xl md:text-4xl font-serif leading-tight">
-            Design Gallery
+            Gallery
           </h1>
-          <p className="mt-4 text-sm md:text-base text-gray-600 max-w-2xl">
+          {/* <p className="mt-4 text-sm md:text-base text-gray-600 max-w-2xl">
             Visual explorations, interface snapshots, and design directions
             across different projects.
-          </p>
+          </p> */}
         </div>
 
         {/* 3×2 Grid */}

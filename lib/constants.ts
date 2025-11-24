@@ -41,7 +41,7 @@ export const faqItems: FAQItem[] = [
     id: "collaboration-style",
     question: "What's your collaboration style?",
     answer:
-      "Yes. I'm fully comfortable communicating and documenting work in English and Mandarin.",
+      "Clear communication, upfront questions, and consistent progress updates.",
   },
 ];
 
