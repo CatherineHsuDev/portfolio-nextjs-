@@ -54,7 +54,7 @@ The design supports multi-variant products—for example, 3 colors × 3 sizes = 
 and includes considerations such as stock management, inventory logic,  
 and order formatting for customer checkouts.
 `,
-      github: "https://evaraclothing.netlify.app/",
+      github: "https://github.com/CatherineHsuDev/Ecommerce-ver-react",
       demo: "https://evaraclothing.netlify.app/",
     },
     {
@@ -129,7 +129,7 @@ Appwrite 於 2023 年後更新了 API 串接方式。早期可以使用內建的
 
 這個專案主要聚焦在資料結構、關聯與電商後端邏輯。
 `,
-      github: "https://evaraclothing.netlify.app/",
+      github: "https://github.com/CatherineHsuDev/Ecommerce-ver-react",
       demo: "https://evaraclothing.netlify.app/",
     },
     {
