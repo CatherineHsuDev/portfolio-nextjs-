@@ -168,7 +168,7 @@ const AboutPage = () => {
           <li>
             {t.bulletModernPrefix}{" "}
             <Link
-              href="/portfolio"
+              href="/portfolio/project/snapgram-story"
               className="text-blue-600 transition-colors hover:text-blue-800"
             >
               {t.bulletModernLink}
@@ -178,7 +178,7 @@ const AboutPage = () => {
 
           <li>
             <Link
-              href="/portfolio"
+              href="/portfolio/project/ecommerce-story"
               className="text-blue-600 transition-colors hover:text-blue-800"
             >
               {t.bulletDb}
@@ -188,7 +188,7 @@ const AboutPage = () => {
           <li>
             {t.bulletAuthPrefix}{" "}
             <Link
-              href="/portfolio"
+              href="/portfolio/project/course-portal-story"
               className="text-blue-600 transition-colors hover:text-blue-800"
             >
               {t.bulletAuthLink}
@@ -199,7 +199,7 @@ const AboutPage = () => {
           <li>
             {t.bulletFullPrefix}{" "}
             <Link
-              href="/portfolio"
+              href="/portfolio/project"
               className="text-blue-600 transition-colors hover:text-blue-800"
             >
               {t.bulletFullLink}

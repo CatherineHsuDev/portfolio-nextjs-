@@ -32,3 +32,124 @@ export const portfolioTranslations: Dict<PortfolioDict> = {
     artAlt: "視覺與插畫作品預覽",
   },
 };
+
+export type ProjectItem = {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  github?: string;
+  story: string;
+  tags?: string[];
+};
+
+// 雙語 project cards
+export const projectItems: Dict<ProjectItem[]> = {
+  en: [
+    {
+      id: "snapgram",
+      title: "Snapgram Social App",
+      description:
+        "An Instagram-style social app where users can upload photos, create posts, like and bookmark content, built with React, TypeScript, Vite, Tailwind CSS, and Appwrite.",
+      image: "/project/snapgram.png",
+      github: "https://github.com/CatherineHsuDev/snapgram-deploy-demo",
+      story: "/portfolio/project/snapgram-story",
+      tags: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "React Router",
+        "React Query",
+        "Appwrite",
+      ],
+    },
+    {
+      id: "ecommerce",
+      title: "E-commerce Platform",
+      description:
+        "A conceptual e-commerce project focusing on database schema design and system architecture, including product catalog, orders, users, and inventory relationships.",
+      image: "/project/ecommerce.png",
+      github:
+        "https://github.com/CatherineHsuDev/Ecommerce-ver-react/blob/main/clothing-run.sql",
+      story: "/portfolio/project/ecommerce-story",
+      tags: ["JavaScript", "Database Design", "ERD", "System Architecture"],
+    },
+    {
+      id: "course-portal",
+      title: "Course Portal",
+      description:
+        "A full-stack course management portal with a React + Vite frontend and a Node.js/Express API backend, featuring JWT-based auth, Google login, and MongoDB for persistent storage.",
+      image: "/project/course.png",
+      github: "https://github.com/yourname/course-portal",
+      story: "/portfolio/project/course-portal-story",
+      tags: [
+        "React",
+        "Vite",
+        "React Router",
+        "Axios",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "Google OAuth",
+        "Passport",
+      ],
+    },
+  ],
+
+  zh: [
+    {
+      id: "snapgram",
+      title: "Snapgram 社交平台",
+      description:
+        "一個類似 Instagram 的社交 App，使用者可上傳照片、發文、按讚與收藏。使用 React、TypeScript、Vite、Tailwind CSS 與 Appwrite 製作。",
+      image: "/project/snapgram.png",
+      github: "https://github.com/CatherineHsuDev/snapgram-deploy-demo",
+      story: "/portfolio/project/snapgram-story",
+      tags: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "React Router",
+        "React Query",
+        "Appwrite",
+      ],
+    },
+    {
+      id: "ecommerce",
+      title: "電商系統",
+      description:
+        "一個專注於資料庫架構與系統設計的電商概念專案，包含商品、訂單、使用者與庫存的資料關聯。",
+      image: "/project/ecommerce.png",
+      github:
+        "https://github.com/CatherineHsuDev/Ecommerce-ver-react/blob/main/clothing-run.sql",
+      story: "/portfolio/project/ecommerce-story",
+      tags: ["JavaScript", "資料庫設計", "ERD", "系統架構"],
+    },
+    {
+      id: "course-portal",
+      title: "課程管理平台",
+      description:
+        "全端課程管理平台，前端使用 React + Vite、後端使用 Node.js/Express，支援 JWT、Google 登入與 MongoDB。",
+      image: "/project/course.png",
+      github: "https://github.com/yourname/course-portal",
+      story: "/portfolio/project/course-portal-story",
+      tags: [
+        "React",
+        "Vite",
+        "React Router",
+        "Axios",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "Google OAuth",
+        "Passport",
+      ],
+    },
+  ],
+};

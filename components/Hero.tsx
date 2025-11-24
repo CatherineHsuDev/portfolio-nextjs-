@@ -7,6 +7,12 @@ import Link from "next/link";
 import { useLanguage } from "@/app/LanguageProvider";
 import { heroTranslations } from "@/i18n";
 
+// Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
@@ -73,11 +79,32 @@ const Hero = () => {
           <p className="text-lg text-black/70">{t.subtitle}</p>
 
           <div className="mt-4 flex flex-row gap-2 w-full md:max-w-[66%] justify-center">
-            <Link
+            {/* <Link
               href="/portfolio"
               className="sm:flex-1 inline-flex justify-center rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-blue-700 transition-colors"
             >
               {t.primaryCta}
+            </Link> */}
+            <Link
+              href="/portfolio"
+              className="
+    relative overflow-hidden
+    sm:flex-1 inline-flex justify-center rounded-full
+    bg-blue-600 px-6 py-2.5 text-sm font-medium text-white
+    shadow-sm hover:bg-blue-700 transition-colors group
+  "
+            >
+              <span className="relative z-10">{t.primaryCta}</span>
+
+              <span
+                className="
+      absolute inset-0 
+      bg-gradient-to-r from-white/10 via-white/20 to-white/10
+      translate-x-[-100%]
+      group-hover:translate-x-[100%]
+      transition-transform duration-700
+    "
+              />
             </Link>
 
             <Link
@@ -92,13 +119,48 @@ const Hero = () => {
         {/* Right (圖片) */}
         <div ref={imageRef} className="w-full md:w-1/2 flex justify-center">
           <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
+            {/* <img
+              src="https://picsum.photos/800/600?random=1"
+              alt={t.imageAlt}
+              className="w-full h-auto object-cover"
+            /> */}
+            <Swiper
+              modules={[EffectFade, Autoplay]}
+              effect="fade"
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              loop={true}
+              allowTouchMove={false} // 不讓手動滑
+              className="h-full"
+            >
+              {[
+                "course-login.png",
+                "course.png",
+                "courseportal-login.png",
+                "ecommerce.png",
+                "snapgram-2.png",
+                "snapgram.png",
+              ].map((file, idx) => (
+                <SwiperSlide key={idx}>
+                  <img
+                    src={`/project/${file}`}
+                    alt={`Project screenshot ${idx + 1}`}
+                    className="w-full h-auto object-fit"
+                    // className="w-full h-auto object-cover"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+        {/* <div ref={imageRef} className="w-full md:w-1/2 flex justify-center">
+          <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
             <img
               src="https://picsum.photos/800/600?random=1"
               alt={t.imageAlt}
               className="w-full h-auto object-cover"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

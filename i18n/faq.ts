@@ -8,12 +8,16 @@ export type FAQItem = {
 };
 
 export type FAQSectionContent = {
-  title: string; // "Questions"
-  intro: string; // 上面那行說明
-  ctaTitle: string; // "Still have questions?"
-  ctaDesc: string; // CTA 說明
-  ctaButton: string; // 按鈕文字
-  items: FAQItem[]; // FAQ 列表
+  title: string;
+  intro: string;
+  ctaTitle: string;
+  ctaDesc: string;
+  ctaButton: string;
+  items: FAQItem[];
+
+  // 👉 新增這兩個 key
+  expandAll: string;
+  collapse: string;
 };
 
 export const faqTranslations: Dict<FAQSectionContent> = {
@@ -24,6 +28,9 @@ export const faqTranslations: Dict<FAQSectionContent> = {
     ctaTitle: "Still have questions?",
     ctaDesc: "Reach out directly and let us talk about your needs.",
     ctaButton: "Contact",
+
+    expandAll: "Show All",
+    collapse: "Hide",
 
     items: [
       {
@@ -71,6 +78,9 @@ export const faqTranslations: Dict<FAQSectionContent> = {
     ctaTitle: "還有其他想問的嗎？",
     ctaDesc: "歡迎參考聯絡頁面直接寫信和我聊聊你的需求。",
     ctaButton: "聯絡我",
+
+    expandAll: "展開全部",
+    collapse: "收起",
 
     items: [
       {
