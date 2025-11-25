@@ -78,6 +78,35 @@ Challenges:
       github: "https://github.com/CatherineHsuDev/coursePortal-backend",
       demo: "https://courseportal-frontend.onrender.com/",
     },
+    {
+      slug: "homework-pdf-tool-story",
+      title: "Photos-to-PDF Tool — Development Story",
+      content: `
+This tool was developed to solve a practical bottleneck in my teaching workflow.
+Students often submit homework through Messenger in multiple photos, and manually downloading,
+ordering, and converting them into a single PDF was slow and repetitive.
+
+To streamline the process, I built a lightweight web tool that allows users to upload multiple images
+and instantly merge them into a single downloadable PDF using pdf-lib.
+
+The project was driven by a real need and significantly improved my daily grading workflow.
+It also strengthened my experience with Next.js Route Handlers, binary file handling (FormData, Uint8Array, Blob),
+and PWA setup for mobile installation.
+
+Key Challenges:
+1. Handling FormData and multiple file uploads  
+2. Using pdf-lib to embed images into PDF pages  
+3. Returning binary data through a Route Handler API  
+4. Setting up PWA (manifest.json) for home-screen installation  
+5. Improving UX with a custom upload button and a smoother selection flow  
+
+The tool is now fully usable on both mobile and desktop and has noticeably improved the speed and consistency
+of my homework review process. Future enhancements include thumbnail previews, drag-to-reorder,
+and automatic PDF naming.
+`,
+      github: "https://github.com/CatherineHsuDev/images-to-pdf",
+      demo: "#",
+    },
   ],
 
   zh: [
@@ -152,6 +181,33 @@ Appwrite 於 2023 年後更新了 API 串接方式。早期可以使用內建的
 `,
       github: "https://github.com/CatherineHsuDev/coursePortal-backend",
       demo: "https://courseportal-frontend.onrender.com/",
+    },
+    {
+      slug: "homework-pdf-tool-story",
+      title: "作業照片一鍵轉 PDF 小工具 — 開發紀錄",
+      content: `
+這個小工具源自我在教學流程中的真實痛點：學生常用 Messenger 傳交多張作業照片，
+每次都需要手動下載、整理順序、匯入 Notability，再轉成 PDF，非常耗時。
+
+為了讓批改流程更順暢，我開發了這個「作業照片轉 PDF」的小工具。
+使用者可以一次選取多張照片，後端會用 pdf-lib 自動合併成一份 PDF 並下載。
+
+這個工具是根據實際需求而開發，完整解決了我在批改作業時的操作瓶頸，
+同時也讓我更熟悉 Next.js Route Handlers、檔案處理流程（binary、FormData）
+以及 PWA 設定與行動裝置相容性。
+
+主要挑戰：
+1. 處理 FormData 與多檔案上傳  
+2. 使用 pdf-lib 合併圖片為 PDF  
+3. 建立 Route Handler API 並回傳二進位檔案  
+4. 設定 PWA（manifest.json）讓工具能加入手機主畫面  
+5. UI/UX 設計：隱藏 file input、使用自訂按鈕、優化選檔流程  
+
+這個工具目前已能在手機與桌面順利使用，也大幅改善了我批改作業的速度與效率。
+未來計劃加入縮圖預覽、拖曳排序、自動命名等功能。
+`,
+      github: "https://github.com/CatherineHsuDev/images-to-pdf",
+      demo: "#",
     },
   ],
 };

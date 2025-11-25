@@ -97,6 +97,23 @@ export const projectItems: Dict<ProjectItem[]> = {
         "Passport",
       ],
     },
+    {
+      id: "homework-pdf-tool",
+      title: "Photos-to-PDF Tool",
+      description:
+        "A lightweight tool designed for teachers to instantly merge multiple homework photos into a single PDF. Built with Next.js and supports PWA, allowing installation as a home-screen Web App.",
+      image: "/project/pdftool.png",
+      github: "https://github.com/CatherineHsuDev/images-to-pdf",
+      story: "/portfolio/project/homework-pdf-tool-story",
+      tags: [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Route Handlers API",
+        "pdf-lib",
+        "PWA",
+      ],
+    },
   ],
 
   zh: [
@@ -149,6 +166,23 @@ export const projectItems: Dict<ProjectItem[]> = {
         "JWT",
         "Google OAuth",
         "Passport",
+      ],
+    },
+    {
+      id: "homework-pdf-tool",
+      title: "作業照片一鍵轉 PDF 小工具",
+      description:
+        "為老師開發的教學小工具，支援多張照片上傳並自動合併成單一 PDF，使用 Next.js 構建，並支援 PWA，可加入手機主畫面當作 Web App。",
+      image: "/project/homework-pdf.png",
+      github: "https://github.com/CatherineHsuDev/pdftool.png",
+      story: "/portfolio/project/homework-pdf-tool-story",
+      tags: [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Route Handlers API",
+        "pdf-lib",
+        "PWA",
       ],
     },
   ],

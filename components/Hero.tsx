@@ -15,6 +15,16 @@ import "swiper/css/effect-fade";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const PROJECT_IMAGES = [
+  "course-login.png",
+  "course.png",
+  "ecommerce.png",
+  "pdftool.png",
+  "snapgram-2.png",
+  "snapgram-3.png",
+  "snapgram.png",
+];
+
 const Hero = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const textRef = useRef<HTMLDivElement | null>(null);
@@ -78,7 +88,7 @@ const Hero = () => {
 
           <p className="text-lg text-black/70">{t.subtitle}</p>
 
-          <div className="mt-4 flex flex-row gap-2 w-full md:max-w-[66%] justify-center">
+          <div className="text-center mt-4 flex flex-row gap-2 w-full md:max-w-full lg:max-w-[66%] justify-center">
             {/* <Link
               href="/portfolio"
               className="sm:flex-1 inline-flex justify-center rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-blue-700 transition-colors"
@@ -123,14 +133,7 @@ const Hero = () => {
               allowTouchMove={false} // 不讓手動滑
               className="h-full"
             >
-              {[
-                "course-login.png",
-                "course.png",
-                "courseportal-login.png",
-                "ecommerce.png",
-                "snapgram-2.png",
-                "snapgram.png",
-              ].map((file, idx) => (
+              {PROJECT_IMAGES.map((file, idx) => (
                 <SwiperSlide key={idx}>
                   <img
                     src={`/project/${file}`}
