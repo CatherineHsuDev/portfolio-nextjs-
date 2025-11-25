@@ -8,12 +8,12 @@ import QuestionsSection from "@/components/QuestionsSection";
 import ServiceCardSet from "@/components/ServiceCardSet";
 
 export default async function Home() {
-  const res = await fetch("http://localhost:8000/api/hello");
-  const data = await res.json();
+  // const res = await fetch("http://localhost:8000/api/hello");
+  // const data = await res.json();
 
   return (
     <section>
-      <p>{data.message}</p>
+      {/* <p>{data.message}</p> */}
       <Hero />
       <ServiceCardSet />
       <DesignSystems />
@@ -21,7 +21,7 @@ export default async function Home() {
       <QuestionsSection />
       <Banner />
       {/* <NewsletterSection /> */}
-      <Footer />
+
     </section>
   );
 }

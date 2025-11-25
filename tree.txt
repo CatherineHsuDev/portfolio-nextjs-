@@ -1,14 +1,6 @@
 frontend
 ├── README.md
 ├── app
-│   ├── (portfolio)
-│   │   ├── design
-│   │   │   └── page.tsx
-│   │   ├── layout.tsx
-│   │   ├── page.tsx
-│   │   ├── project
-│   │   │   └── page.tsx
-│   │   └── unkwown
 │   ├── (root)
 │   │   ├── about
 │   │   │   └── page.tsx
@@ -18,32 +10,70 @@ frontend
 │   │   │   └── page.tsx
 │   │   └── resume
 │   │       └── page.tsx
+│   ├── LanguageProvider.tsx
 │   ├── error.tsx
 │   ├── favicon.ico
 │   ├── globals.css
 │   ├── layout.tsx
-│   └── page.tsx
+│   ├── not-found.tsx
+│   ├── page.tsx
+│   ├── portfolio
+│   │   ├── design
+│   │   │   └── page.tsx
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   └── project
+│   │       ├── [slug]
+│   │       │   └── page.tsx
+│   │       ├── page.tsx
+│   │       ├── stories-data.ts
+│   │       └── story-template.tsx
+│   └── translations.old.ts
 ├── components
 │   ├── Banner.tsx
 │   ├── Button.tsx
+│   ├── ComingSoon.tsx
 │   ├── DesignSystem.tsx
 │   ├── Footer.tsx
 │   ├── Hero.tsx
 │   ├── Navbar.tsx
 │   ├── NewsletterSection.tsx
+│   ├── ProjectCard.tsx
 │   ├── ProjectsSection.tsx
 │   ├── QuestionsSection.tsx
-│   └── ServiceCardSet.tsx
+│   ├── ServiceCardSet.tsx
+│   └── TwoColumnSection.tsx
 ├── eslint.config.mjs
+├── i18n
+│   ├── about.ts
+│   ├── banner.ts
+│   ├── contact.ts
+│   ├── faq.ts
+│   ├── footer.ts
+│   ├── hero.ts
+│   ├── index.ts
+│   ├── nav.ts
+│   ├── portfolio.ts
+│   └── types.ts
+├── lib
+│   └── constants.ts
 ├── next-env.d.ts
 ├── next.config.ts
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.mjs
 ├── public
-│   ├── file.svg
-│   ├── globe.svg
-│   ├── vercel.svg
-│   └── window.svg
+│   ├── gallery-1.jpg
+│   ├── gallery-2.png
+│   ├── gallery-3.png
+│   ├── gallery-4.png
+│   ├── gallery-5.png
+│   └── project
+│       ├── course-login.png
+│       ├── course.png
+│       ├── courseportal-login.png
+│       ├── ecommerce.png
+│       ├── snapgram-2.png
+│       └── snapgram.png
 ├── tree.txt
 └── tsconfig.json

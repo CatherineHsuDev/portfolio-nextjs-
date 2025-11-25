@@ -3,8 +3,12 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { useLanguage } from "@/app/LanguageProvider";
+import { navTranslations } from "@/i18n";
 
 export default function Nav() {
+  const { lang, setLang } = useLanguage();
+  const t = navTranslations[lang];
   const [isDesktopMoreOpen, setIsDesktopMoreOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -22,7 +26,7 @@ export default function Nav() {
     closeTimeoutRef.current = setTimeout(() => {
       setIsDesktopMoreOpen(false);
       closeTimeoutRef.current = null;
-    }, 1500);
+    }, 1050);
   };
 
   useEffect(() => {
@@ -38,29 +42,31 @@ export default function Nav() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link href="/" className="text-xl font-heading">
-          Catherine
+          {t.brand}
+          {/* Catherine */}
         </Link>
 
         {/* Desktop menu (顯示在 >=768px，接近你設計的 768 / 1440 版本) */}
         <div className="hidden md:flex items-center gap-8">
+          <button
+            type="button"
+            onClick={() => setLang(lang === "en" ? "zh" : "en")}
+            className="flex items-center gap-1 text-sm font-medium hover:text-black/70 transition-colors cursor-pointer select-none"
+          >
+            {lang === "en" ? "繁中" : "EN"}
+          </button>
           <Link
             href="/portfolio"
             className="text-sm font-medium hover:text-black/70 transition-colors"
           >
-            Portfolio
+            {t.portfolio}
           </Link>
 
           <Link
             href="/blog"
             className="text-sm font-medium hover:text-black/70 transition-colors"
           >
-            Blog
-          </Link>
-          <Link
-            href="/blog"
-            className="text-sm font-medium hover:text-black/70 transition-colors"
-          >
-            Github
+            {t.blog}
           </Link>
 
           {/* More dropdown (Desktop only) */}
@@ -73,7 +79,7 @@ export default function Nav() {
               type="button"
               className="flex items-center gap-1 text-sm font-medium hover:text-black/70 transition-colors cursor-pointer select-none"
             >
-              More <ChevronDown size={16} />
+              {t.more} <ChevronDown size={16} />
             </button>
 
             {isDesktopMoreOpen && (
@@ -86,44 +92,42 @@ export default function Nav() {
                   className="block px-4 py-2 text-sm rounded-md hover:bg-gray-100"
                   onClick={() => setIsDesktopMoreOpen(false)}
                 >
-                  About
+                  {t.about}
                 </Link>
                 <Link
                   href="/contact"
                   className="block px-4 py-2 text-sm rounded-md hover:bg-gray-100"
                   onClick={() => setIsDesktopMoreOpen(false)}
                 >
-                  Contact
+                  {t.contact}
                 </Link>
+
                 <Link
-                  href="/resume"
-                  className="block px-4 py-2 text-sm rounded-md hover:bg-gray-100"
-                  onClick={() => setIsDesktopMoreOpen(false)}
-                >
-                  Resume
-                </Link>
-                <Link
-                  href="/resume"
-                  className="block px-4 py-2 text-sm rounded-md hover:bg-gray-100"
-                  onClick={() => setIsDesktopMoreOpen(false)}
-                >
-                  Github
-                </Link>
-                <Link
-                  href="/resume"
-                  className="block px-4 py-2 text-sm rounded-md hover:bg-gray-100"
-                  onClick={() => setIsDesktopMoreOpen(false)}
-                >
-                  Resume
-                </Link>
-                {/* <Link
-                  href="/resume.pdf"
+                  href="https://github.com/CatherineHsuDev"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="block px-4 py-2 text-sm rounded-md hover:bg-gray-100"
                   onClick={() => setIsDesktopMoreOpen(false)}
                 >
-                  Resume
-                </Link> */}
+                  {t.github}
+                </Link>
+
+                {/* <Link
+                    href="/resume"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-gray-100"
+                    onClick={() => setIsDesktopMoreOpen(false)}
+                  >
+                    Resume
+                  </Link>
+                  <Link
+                    href="/resume.pdf"
+                    target="_blank"
+                    className="block px-4 py-2 text-sm rounded-md hover:bg-gray-100"
+                    onClick={() => setIsDesktopMoreOpen(false)}
+                  >
+                    Resume
+                  </Link>
+                  */}
               </div>
             )}
           </div>
@@ -132,24 +136,26 @@ export default function Nav() {
         {/* Mobile / Tablet hamburger (顯示在 <768，包括 375 & 小平板斷點) */}
         <button
           type="button"
-          className="md:hidden inline-flex items-center justify-center rounded-md border px-2.5 py-1.5 text-sm font-medium hover:bg-gray-50 transition-colors"
+          className="md:hidden inline-flex items-center justify-center px-2.5 py-1.5 text-sm font-medium hover:bg-gray-50 transition-colors"
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
           aria-label="Toggle navigation"
         >
-          {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          {isMobileMenuOpen ? <X size={20} /> : <Menu size={23} />}
         </button>
       </nav>
 
       {/* Mobile / Tablet menu panel */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-md">
-          <div className="mx-auto max-w-6xl px-6 py-4 flex flex-col gap-3">
+          <div className="mx-auto max-w-6xl px-6 py-4 flex flex-col gap-3 text-center">
+            <div className="h-px bg-gray-200 my-1" />
+
             <Link
               href="/portfolio"
               className="text-sm font-medium hover:text-black/70 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Portfolio
+              {t.portfolio}
             </Link>
 
             <Link
@@ -157,7 +163,17 @@ export default function Nav() {
               className="text-sm font-medium hover:text-black/70 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Blog
+              {t.blog}
+            </Link>
+
+            <Link
+              href="https://github.com/CatherineHsuDev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium hover:text-black/70 transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t.github}
             </Link>
 
             {/* More 區塊直接展開為一般連結，手機不用 hover dropdown */}
@@ -168,31 +184,41 @@ export default function Nav() {
               className="text-sm font-medium hover:text-black/70 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              About
+              {t.about}
             </Link>
+
             <Link
               href="/contact"
               className="text-sm font-medium hover:text-black/70 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Contact
+              {t.contact}
             </Link>
-            <Link
-              href="/resume"
-              className="text-sm font-medium hover:text-black/70 transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Resume
-            </Link>
+
             {/* <Link
-              href="/resume"
-              // href="/resume.pdf"
-              // target="_blank"
-              className="text-sm font-medium hover:text-black/70 transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
+                href="/resume"
+                className="text-sm font-medium hover:text-black/70 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t.resume}
+              </Link>
+              <Link
+                href="/resume"
+                // href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium hover:text-black/70 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Resume
+              </Link> */}
+            <button
+              type="button"
+              onClick={() => setLang(lang === "en" ? "zh" : "en")}
+              className="w-full py-1 text-xs font-medium hover:bg-gray-50 transition-colors"
             >
-              Resume
-            </Link> */}
+              {lang === "en" ? "繁中" : "EN"}
+            </button>
           </div>
         </div>
       )}

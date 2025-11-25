@@ -1,8 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useLanguage } from "@/app/LanguageProvider";
+import { footerTranslations } from "@/i18n";
 
 const Footer = () => {
+  const { lang } = useLanguage();
+  const t = footerTranslations[lang];
   return (
     <footer className="w-full bg-color-background">
       <div className="mx-auto max-w-6xl px-6 py-14 md:px-6 md:py-24">
@@ -10,70 +14,63 @@ const Footer = () => {
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           {/* 左側：Logo + Address + Contact + Social */}
           <div className="space-y-6">
-            <div className="text-2xl font-heading">Catherine</div>
+            <div className="text-2xl font-heading">{t.brand}</div>
 
             <div className="space-y-2 text-sm text-gray-700">
               <div>
-                <div className="font-semibold">Address</div>
-                <div>Taichung, Taiwan</div>
+                <div className="font-semibold">{t.addressLabel}</div>
+                <div>{t.addressValue}</div>
               </div>
 
               <div className="pt-2">
-                <div className="font-semibold">Contact</div>
+                <div className="font-semibold">{t.contactLabel}</div>
                 <Link
-                  href="mailto:hello@example.com"
-                  className="text-gray-800 underline underline-offset-2"
+                  href={`mailto:${t.contactEmail}`}
+                  className="text-gray-800"
                 >
-                  catherine.hsu.dev@gmail.com
+                  {t.contactEmail}
                 </Link>
               </div>
             </div>
 
             {/* Social icons（用簡單文字/emoji 代替） */}
-            <div className="flex items-center gap-4 text-gray-700 text-sm">
+            {/* <div className="flex items-center gap-4 text-gray-700 text-sm">
               <span>📘</span>
               <span>🐦</span>
               <span>📸</span>
               <span>💼</span>
               <span>▶️</span>
-            </div>
+            </div> */}
           </div>
 
           {/* 右側：多欄導覽 */}
           <div className="grid grid-cols-2 gap-8 text-sm text-gray-700 md:text-right md:gap-x-16">
             <div className="space-y-2">
-              <Link href="/home" className="block hover:underline">
-                Home
-              </Link>
               <Link href="/portfolio" className="block hover:underline">
-                Portfolio
+                {t.navPortfolio}
               </Link>
-              <Link href="/projects" className="block hover:underline">
-                Project
+              <Link href="/portfolio/project" className="block hover:underline">
+                {t.navProject}
               </Link>
               <Link href="/blog" className="block hover:underline">
-                Blog
-              </Link>
-              <Link href="/blog/post" className="block hover:underline">
-                Blog post
+                {t.navBlog}
               </Link>
             </div>
 
             <div className="space-y-2">
+              <Link href="/" className="block hover:underline">
+                {t.navHome}
+              </Link>
               <Link href="/contact" className="block hover:underline">
-                Contact
+                {t.navContact}
               </Link>
-              <Link href="/react" className="block hover:underline">
-                React work
-              </Link>
-              <Link href="/nextjs" className="block hover:underline">
-                Next.js apps
-              </Link>
-              <Link href="/typescript" className="block hover:underline">
-                TypeScript
-              </Link>
-              <Link href="/node" className="block hover:underline">
-                Node.js
+              <Link
+                href="https://github.com/CatherineHsuDev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:underline"
+              >
+                {t.navGithub}
               </Link>
             </div>
           </div>
@@ -81,17 +78,19 @@ const Footer = () => {
 
         {/* 下半部：版權 & 法律連結 */}
         <div className="mt-10 border-t border-gray-200 pt-6 flex flex-col gap-3 text-xs text-gray-500 md:flex-row md:items-center md:justify-between">
-          <div>© {new Date().getFullYear()} All rights reserved.</div>
+          <div>
+            © {new Date().getFullYear()} {t.copyright}
+          </div>
 
           <div className="flex flex-wrap gap-4">
             <Link href="/privacy" className="hover:underline">
-              Privacy policy
+              {t.policyPrivacy}
             </Link>
             <Link href="/terms" className="hover:underline">
-              Terms of service
+              {t.policyTerms}
             </Link>
             <Link href="/cookies" className="hover:underline">
-              Cookie settings
+              {t.policyCookies}
             </Link>
           </div>
         </div>
