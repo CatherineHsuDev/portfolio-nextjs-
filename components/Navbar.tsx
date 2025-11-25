@@ -149,6 +149,7 @@ export default function Nav() {
         <div className="md:hidden bg-white/95 backdrop-blur-md">
           <div className="mx-auto max-w-6xl px-6 py-4 flex flex-col gap-3 text-center">
             <div className="h-px bg-gray-200 my-1" />
+
             <Link
               href="/portfolio"
               className="text-sm font-medium hover:text-black/70 transition-colors"
@@ -165,6 +166,16 @@ export default function Nav() {
               {t.blog}
             </Link>
 
+            <Link
+              href="https://github.com/CatherineHsuDev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium hover:text-black/70 transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t.github}
+            </Link>
+
             {/* More 區塊直接展開為一般連結，手機不用 hover dropdown */}
             <div className="h-px bg-gray-200 my-1" />
 
@@ -175,6 +186,7 @@ export default function Nav() {
             >
               {t.about}
             </Link>
+
             <Link
               href="/contact"
               className="text-sm font-medium hover:text-black/70 transition-colors"

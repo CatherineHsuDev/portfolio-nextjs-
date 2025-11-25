@@ -64,6 +64,14 @@ const Footer = () => {
               <Link href="/contact" className="block hover:underline">
                 {t.navContact}
               </Link>
+              <Link
+                href="https://github.com/CatherineHsuDev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:underline"
+              >
+                {t.navGithub}
+              </Link>
             </div>
           </div>
         </div>

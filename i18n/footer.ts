@@ -14,6 +14,7 @@ export type FooterContent = {
   navProject: string;
   navBlog: string;
   navContact: string;
+  navGithub: string;
 
   policyPrivacy: string;
   policyTerms: string;
@@ -37,7 +38,7 @@ export const footerTranslations: Dict<FooterContent> = {
     navProject: "Project",
     navBlog: "Blog",
     navContact: "Contact",
-
+    navGithub: "Github",
     policyPrivacy: "Privacy policy",
     policyTerms: "Terms of service",
     policyCookies: "Cookie settings",
@@ -59,6 +60,7 @@ export const footerTranslations: Dict<FooterContent> = {
     navProject: "專案",
     navBlog: "部落格",
     navContact: "聯絡我",
+    navGithub: "Github",
 
     policyPrivacy: "隱私權政策",
     policyTerms: "服務條款",
