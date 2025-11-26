@@ -107,6 +107,58 @@ and automatic PDF naming.
       github: "https://github.com/CatherineHsuDev/images-to-pdf",
       demo: "#",
     },
+    {
+      slug: "image-cropper-tool-story",
+      title: "Image Cropping & Proportional Scaling Tool — Development Notes",
+      content: `
+Whenever I needed to resize or adjust an image slightly, I had to open Photoshop,  
+a heavy, slow-to-launch application even though the task itself was extremely simple.
+
+So I built a lightweight tool to handle these tasks instantly.
+
+One of the features I use the most is the “Fill Canvas” button.  
+I simply enter the canvas size → drop in the image → click “Fill Canvas,”  
+and the tool automatically scales the image proportionally to cover the entire canvas.
+No manual dragging or resizing like in Photoshop.
+
+
+This custom image cropping tool supports:
+- Custom canvas size (with transparent grid background)
+- Dragging to reposition the image
+- Proportional scaling that preserves the aspect ratio
+- Eight resize handles with fixed reverse-anchor behavior
+- Canvas zoom and image zoom (dual-layer zoom)
+- One-click Fill Canvas to cover the entire canvas instantly
+- Visual cropping of overflow areas (non-destructive)
+
+The design goal was “fast, intuitive, and no heavy software,”  
+allowing me to complete in seconds what previously required opening Photoshop.
+
+Main challenges:
+1. Converting between screen coordinates and canvas coordinates (canvasZoom)
+2. Ensuring the cursor always holds the point originally clicked during dragging
+3. Implementing cursor-centered zoom instead of top-left scaling
+4. Using geometric calculations for resize handles to prevent drifting during fast movement
+5. Synchronizing image scale, offset, anchor, and proportional constraints
+
+The tool is built entirely with vanilla JavaScript, HTML Canvas, and CSS.
+
+Results:
+With this tool, I no longer need to open Photoshop for simple adjustments.  
+My workflow is lighter, faster, and more convenient especially with the Fill Canvas feature.
+
+Future improvements:
+- PNG / JPG export
+- Alignment guides
+- Undo / Redo
+- Image rotation and flipping
+- Canvas size presets
+
+This tool removes a small but frequent friction point from my daily workflow.
+`,
+      github: "https://github.com/CatherineHsuDev/img-crop-tool",
+      demo: "#",
+    },
   ],
 
   zh: [
@@ -207,6 +259,56 @@ Appwrite 於 2023 年後更新了 API 串接方式。早期可以使用內建的
 未來計劃加入縮圖預覽、拖曳排序、自動命名等功能。
 `,
       github: "https://github.com/CatherineHsuDev/images-to-pdf",
+      demo: "#",
+    },
+    {
+      slug: "image-cropper-tool-story",
+      title: "圖片裁切與等比例縮放小工具 — 開發紀錄",
+      content: `
+每次只是想「調整圖片尺寸」或「移動一下構圖位置」，卻必須開啟 Photoshop，
+不但啟動時間長，也非常吃電腦資源，而我要做的事情其實非常簡單。
+
+於是我決定自己做一個能快速處理這類需求的小工具。
+
+其中我最常用、也最省時的功能，就是「一鍵填滿 Fill Canvas」。  
+我只需要輸入畫布尺寸 → 插入圖片 → 按下一鍵填滿，  
+圖片就會自動等比例放大到覆蓋整個畫布，完全不用像在 Photoshop 那樣手拉調整。
+
+這個自製圖片裁切工具支援：
+- 自訂畫布尺寸（透明格子底）
+- 拖曳調整圖片位置
+- 維持原比例的等比例縮放
+- 八個方向的縮放手把（固定反向錨點）
+- 畫布 zoom 與圖片 zoom（雙層縮放）
+- 一鍵填滿（Fill Canvas）快速覆蓋整個畫布
+- 超出畫布範圍的圖片視覺裁切（不破壞原圖）
+
+整體操作以「快速、直覺、不開大型軟體」為目標，
+讓我能在幾秒內完成過去需要開 Photoshop 的操作。
+
+主要挑戰：
+1. 螢幕座標與畫布座標換算（canvasZoom）
+2. 拖曳時游標始終抓住原本按下的位置，不會飄移
+3. 圖片縮放以游標為中心，而不是固定左上角
+4. 拉伸手把使用幾何方式解 scale，快速拖曳時仍不飄移
+5. 圖片縮放、位移、錨點與 offset 的同步運算
+
+完全使用原生 JavaScript、HTML Canvas 與 CSS 實作，不依賴外部套件。
+
+使用成果：
+有了這個工具後，我不再需要為了做一件非常簡單的事而打開 Photoshop，
+工作流程變得更輕量、更快速，尤其是一鍵填滿功能讓日常處理圖片更直覺。
+
+未來計畫加入：
+- 匯出 PNG / JPG
+- 對齊線（alignment guides）
+- Undo / Redo
+- 圖片旋轉與翻轉
+- 常用畫布尺寸 preset
+
+這個工具成功把我日常流程中一個「小但頻繁的痛點」完全移除。
+`,
+      github: "https://github.com/CatherineHsuDev/img-crop-tool",
       demo: "#",
     },
   ],

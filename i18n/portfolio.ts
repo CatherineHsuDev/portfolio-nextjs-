@@ -114,6 +114,23 @@ export const projectItems: Dict<ProjectItem[]> = {
         "PWA",
       ],
     },
+    {
+      id: "image-cropper-tool",
+      title: "Image Cropping & Proportional Scaling Tool",
+      description:
+        "To avoid opening Photoshop just to resize an image, I built this lightweight cropping tool. Set the canvas size, drop in your image, hit “Fill Canvas,” and it's done — no manual resizing needed.",
+      image: "/project/crop-img.png",
+      github: "https://github.com/CatherineHsuDev/img-crop-tool",
+      story: "/portfolio/project/image-cropper-tool-story",
+      tags: [
+        "JavaScript",
+        "HTML Canvas",
+        "CSS",
+        "Image Processing",
+        "Drag & Resize",
+        "Custom Tools",
+      ],
+    },
   ],
 
   zh: [
@@ -173,7 +190,7 @@ export const projectItems: Dict<ProjectItem[]> = {
       title: "作業照片一鍵轉 PDF 小工具",
       description:
         "為老師開發的教學小工具，支援多張照片上傳並自動合併成單一 PDF，使用 Next.js 構建，並支援 PWA，可加入手機主畫面當作 Web App。",
-      image: "/project/homework-pdf.png",
+      image: "/project/pdftool.png",
       github: "https://github.com/CatherineHsuDev/pdftool.png",
       story: "/portfolio/project/homework-pdf-tool-story",
       tags: [
@@ -183,6 +200,23 @@ export const projectItems: Dict<ProjectItem[]> = {
         "Route Handlers API",
         "pdf-lib",
         "PWA",
+      ],
+    },
+    {
+      id: "image-cropper-tool",
+      title: "圖片裁切與等比例縮放小工具",
+      description:
+        "為了省略開啟 Photoshop 改圖片尺寸的步驟，我做了一個圖片裁切工具。只要設定畫布大小、插入圖片，一鍵填滿畫布（Fill Canvas）就能完成，完全不用手動拉放大。",
+      image: "/project/crop-img.png",
+      github: "https://github.com/CatherineHsuDev/img-crop-tool",
+      story: "/portfolio/project/image-cropper-tool-story",
+      tags: [
+        "JavaScript",
+        "HTML Canvas",
+        "CSS",
+        "Image Processing",
+        "Drag & Resize",
+        "Custom Tools",
       ],
     },
   ],
