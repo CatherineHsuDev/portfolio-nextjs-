@@ -20,6 +20,7 @@ const PROJECT_IMAGES = [
   "course.png",
   "ecommerce.png",
   "pdftool.png",
+  "crop-img.png",
   "snapgram-2.png",
   "snapgram-3.png",
   "snapgram.png",
