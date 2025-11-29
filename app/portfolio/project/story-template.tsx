@@ -107,7 +107,7 @@ export default function StoryTemplate({ slug }: StoryTemplateProps) {
 
               <button
                 onClick={() => setPdfOpen(true)}
-                className="mt-4 inline-flex items-center rounded-full border border-gray-300  bg-blue-600 px-5 py-2 text-sm font-medium text-white hover:bg-blue-700 transition"
+                className="cursor-pointer mt-4 inline-flex items-center rounded-full border border-gray-300  bg-blue-600 px-5 py-2 text-sm font-medium text-white hover:bg-blue-700 transition"
               >
                 {ui.openPdf}
               </button>
