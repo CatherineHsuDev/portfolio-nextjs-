@@ -8,7 +8,22 @@ export type StoryItem = {
 };
 
 export const PROJECT_STORIES: Dict<StoryItem[]> = {
-   en: [
+  en: [
+    {
+      slug: "tailwind-group-hover-not-working-with-custom-class",
+      title: "Why group-hover Doesn't Apply Custom Classes in Tailwind",
+      content: `Issue:
+While implementing interactive sidebar icons, the goal was to switch the icon stroke to white when the parent <li> is hovered. The class group-hover:invert-white was added on the icon, but the hover state produced no visual changes. Only the active state (isActive = true) correctly applied the custom invert-white class, even though the parent hover background updates as expected.
+
+Cause:
+Tailwind variants (hover, group-hover, md, etc.) only apply to built-in utility classes. Custom classes created through @apply do not automatically receive variant-generated styles, so group-hover:invert-white produces no valid CSS and cannot be triggered on hover.
+
+Fix:
+Replace the custom class with Tailwind utilities such as group-hover:invert and group-hover:brightness-0. If a custom class is required, define a manual group-hover selector inside @layer components.
+
+Result:
+The hover behavior works as intended, and the icon stroke updates correctly. Understanding variant limitations helps avoid invalid class usage and keeps interactive behavior predictable and stable.`,
+    },
     {
       slug: "react-query-infinite-initial-page-param",
       title: "Fixing React Query Infinite Query: Missing initialPageParam",
@@ -28,16 +43,16 @@ Type inference returns to normal. Infinite Query can safely load the first page 
       slug: "appwrite-account-401-guest-scope",
       title: "Appwrite 401: Guest role missing account permission",
       content: `Issue:
-On page load, the app was calling account.get(), and the console showed repeated 401 errors with “User (role: guests) missing scopes (['account'])”.
+        On page load, the app was calling account.get(), and the console showed repeated 401 errors with “User (role: guests) missing scopes (['account'])”.
 
-Cause:
-Unauthenticated users are guests in Appwrite and do not have permission to access /account. Since the home page was calling account.get() before authentication finished, the request was made while still in a guest state.
+        Cause:
+        Unauthenticated users are guests in Appwrite and do not have permission to access /account. Since the home page was calling account.get() before authentication finished, the request was made while still in a guest state.
 
-Fix:
-Remove the account.get() call from the home page. Instead, let the Auth / Router protection layer load home data only after the user is confirmed as logged in.
+        Fix:
+        Remove the account.get() call from the home page. Instead, let the Auth / Router protection layer load home data only after the user is confirmed as logged in.
 
-Result:
-Unauthenticated users no longer hit the /account endpoint. The 401 errors are gone, and the sign-in flow plus home loading are much cleaner and more stable.`,
+        Result:
+        Unauthenticated users no longer hit the /account endpoint. The 401 errors are gone, and the sign-in flow plus home loading are much cleaner and more stable.`,
     },
     {
       slug: "home-flash-before-sign-in-redirect",
@@ -238,10 +253,24 @@ console.log no longer fires too early and prints empty values. Async flows becom
     },
   ],
 
-
   /* ------------------------- ZH VERSION ------------------------- */
 
   zh: [
+    {
+      slug: "tailwind-group-hover-custom-class-variant-limit",
+      title: "為什麼 group-hover 無法套用自訂 class？理解 Tailwind 變體的限制",
+      content: `狀況：
+在設定 Sidebar icon 的互動效果時，希望在父層 <li> hover 時切換為白色樣式，因此在圖示上加入 group-hover:invert-white。然而 hover 並未觸發任何變化，只有連結處於 active（isActive = true）時，自訂的 invert-white class 才會生效。父層本身的 hover 背景變色正常，但 icon stroke 沒有跟著更新。
+
+原因：
+Tailwind 的變體（variants）僅對內建 utility class 生效，不會針對自訂 class 自動生成 group-hover、hover、md 等變體版本。因此 group-hover:invert-white不會編譯成有效 CSS，導致 hover 時無法套用樣式。
+
+處理方式：
+將自訂的 invert-white 改為使用 Tailwind 原生 utility，例如 group-hover:invert 與 group-hover:brightness-0。如果需要保留自訂 class，需在 @layer components 中手動撰寫對應的 group-hover 選擇器。
+
+處理結果：
+hover 樣式能正常套用，icon stroke 依預期變更。理解 variants 的限制後，也能避免使用無效的 class，互動行為變得更容易掌控。`,
+    },
     {
       slug: "react-query-infinite-initial-page-param",
       title: "修復 React Query Infinite Query：缺少 initialPageParam",
