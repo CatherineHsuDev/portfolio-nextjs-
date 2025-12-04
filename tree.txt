@@ -26,13 +26,13 @@ frontend
 │   │       ├── [slug]
 │   │       │   └── page.tsx
 │   │       ├── page.tsx
-│   │       ├── stories-data.ts
 │   │       └── story-template.tsx
 │   └── translations.old.ts
 ├── components
 │   ├── Banner.tsx
 │   ├── Button.tsx
 │   ├── ComingSoon.tsx
+│   ├── DebugPost.tsx
 │   ├── DesignSystem.tsx
 │   ├── Footer.tsx
 │   ├── Hero.tsx
@@ -48,17 +48,23 @@ frontend
 │   ├── about.ts
 │   ├── banner.ts
 │   ├── contact.ts
+│   ├── debug-data.ts
+│   ├── design.ts
 │   ├── faq.ts
 │   ├── footer.ts
 │   ├── hero.ts
 │   ├── index.ts
 │   ├── nav.ts
 │   ├── portfolio.ts
+│   ├── projects.ts
+│   ├── service.ts
+│   ├── stories-data.ts
 │   └── types.ts
 ├── lib
 │   └── constants.ts
 ├── next-env.d.ts
 ├── next.config.ts
+├── note.txt
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.mjs
@@ -68,12 +74,20 @@ frontend
 │   ├── gallery-3.png
 │   ├── gallery-4.png
 │   ├── gallery-5.png
+│   ├── icon.png
+│   ├── programming.jpg
 │   └── project
+│       ├── color.png
 │       ├── course-login.png
 │       ├── course.png
-│       ├── courseportal-login.png
+│       ├── crop-img.png
+│       ├── database.png
 │       ├── ecommerce.png
+│       ├── ecommercedb.pdf
+│       ├── pdftool.png
 │       ├── snapgram-2.png
-│       └── snapgram.png
+│       ├── snapgram-3.png
+│       ├── snapgram.png
+│       └── wireframe.png
 ├── tree.txt
 └── tsconfig.json
