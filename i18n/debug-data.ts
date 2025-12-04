@@ -1,13 +1,13 @@
 // frontend/i18n/debug-data.ts
 import type { Dict } from "./types";
 
-export type StoryItem = {
+export type DebugItem = {
   slug: string;
   title: string;
   content: string;
 };
 
-export const PROJECT_STORIES: Dict<StoryItem[]> = {
+export const PROJECT_STORIES: Dict<DebugItem[]> = {
   en: [
     {
       slug: "tailwind-group-hover-not-working-with-custom-class",
@@ -257,7 +257,7 @@ console.log no longer fires too early and prints empty values. Async flows becom
 
   zh: [
     {
-      slug: "tailwind-group-hover-custom-class-variant-limit",
+      slug: "tailwind-group-hover-not-working-with-custom-class",
       title: "為什麼 group-hover 無法套用自訂 class？理解 Tailwind 變體的限制",
       content: `狀況：
 在設定 Sidebar icon 的互動效果時，希望在父層 <li> hover 時切換為白色樣式，因此在圖示上加入 group-hover:invert-white。然而 hover 並未觸發任何變化，只有連結處於 active（isActive = true）時，自訂的 invert-white class 才會生效。父層本身的 hover 背景變色正常，但 icon stroke 沒有跟著更新。

@@ -5,6 +5,7 @@ import { PROJECT_STORIES } from "../../../i18n/stories-data";
 import { SendHorizontal } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import CommentBoard from "@/components/CommentBoard";
 
 type StoryTemplateProps = {
   slug: string;
@@ -313,6 +314,8 @@ export default function StoryTemplate({ slug }: StoryTemplateProps) {
             </div>
           </form>
         </div>
+
+        <CommentBoard lang={lang} ui={ui} />
         {/* ⭐⭐ 留言區結束 */}
       </div>
     </section>
