@@ -251,6 +251,23 @@ First, clarify the execution order and when data actually becomes available. The
 Result:
 console.log no longer fires too early and prints empty values. Async flows become easier to control, and you stop mistaking timing issues for runtime errors. Code readability and stability improve significantly.`,
     },
+    {
+      slug: "css-grid-match-column-height-without-fixed-values",
+      title:
+        "How to Match Column Heights in CSS Grid Without Setting a Fixed Height",
+      content: `Issue:
+In a two-column CSS Grid layout, the right column naturally expands to 890px due to its internal components (upload area, canvas preview, toolbar). The left column, however, only renders at its content height (around 443px), resulting in misaligned columns. The goal is to make the left column match the right column’s height without explicitly setting height: 890px, while vertically centering its content along the Y-axis.
+
+Cause:
+In CSS Grid, grid items only stretch to the full row height if the container allows it. Without explicitly using align-items: stretch, or when child elements do not consume the available height, columns fall back to content-based sizing. Additionally, the left column lacked a layout context for vertical alignment.
+
+Solution:
+First, set align-items: stretch on the grid container so both columns share the same row height.
+Second, apply height: 100% to the left column and use flexbox with align-items: center to vertically center its content within the available height.
+
+Result:
+The left column now automatically matches the right column’s computed height (890px) without relying on hard-coded values. The mock preview remains vertically centered, and the layout stays flexible, predictable, and responsive to content changes.`,
+    },
   ],
 
   /* ------------------------- ZH VERSION ------------------------- */
@@ -498,6 +515,22 @@ optional chaining ?. 用來避免在 searchedPosts 為 undefined 時讀取 .docu
 
 處理結果：
 console.log 不再因過早執行而出現空值，非同步流程變得容易掌控，也不會再誤以為是 runtime error。程式可讀性與穩定性大幅提升。`,
+    },
+    {
+      slug: "css-grid-sync-column-height-without-fixed-height",
+      title: "CSS Grid 中如何在不設定固定高度的情況下同步左右欄高度",
+      content: `狀況：
+在使用 CSS Grid 建立左右雙欄版面時，右欄因為內部多個區塊（上傳框、剪裁區、工具列）而自然撐高到 890px，但左欄僅依自身內容高度呈現，實際高度約為 443px，導致左右視覺不對齊。需求是在不設定 height: 890px 的前提下，讓左欄高度與右欄同步，並能在左欄中將內容於 Y 軸垂直置中。
+
+原因：
+在 CSS Grid 中，grid item 是否撐滿所在的 row，取決於 grid container 的 align-items 設定。若未明確使用 stretch，或子層未吃滿父層高度，欄位就會退回以內容高度計算。此外，左欄本身並未建立可用於垂直置中的排版上下文。
+
+處理方式：
+第一步，在 grid 容器上設定 align-items: stretch，讓左右兩欄共享同一列高度。
+第二步，讓左欄容器設定 height: 100%，並使用 flex 排版搭配 align-items: center，使內部內容在欄位高度中垂直置中。
+
+處理結果：
+左欄成功跟隨右欄的自然高度（890px），且在不使用任何固定高度的情況下完成等高布局。示意圖卡片能在左欄中垂直置中，整體版面對齊且具備良好延展性。`,
     },
   ],
 };
