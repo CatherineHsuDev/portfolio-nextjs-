@@ -13,6 +13,30 @@ export type ProjectStory = {
 export const PROJECT_STORIES: Dict<ProjectStory[]> = {
   en: [
     {
+      slug: "gemini-chatbot-story",
+      title: "Gemini Chatbot – API Integration Story",
+      content: `
+Gemini Chatbot is a lightweight full-stack project built to practice integrating a third-party AI API
+into a web application using a clean request–response model.
+
+Key Challenges:
+1. Designing a backend API endpoint that forwards user prompts to the Gemini API
+2. Handling request validation and response formatting between frontend and backend
+3. Ensuring consistent API behavior across local and deployed environments
+
+During development, several API integration issues were identified:
+- The Gemini SDK import style must match the installed package version, otherwise the backend fails at runtime
+- API keys must never be hardcoded and must be injected through environment variables
+- AI responses can vary in latency, requiring careful handling of request timeouts and error states
+- The backend API must remain stable regardless of frontend environment (local or production)
+
+The project focuses on building a reliable API layer that cleanly abstracts AI communication
+from the frontend application.
+`,
+      github: "https://github.com/CatherineHsuDev/gemini-chatbot-demo-backend",
+      demo: "https://gemini-chatbot-demo-frontend.onrender.com",
+    },
+    {
       slug: "snapgram-story",
       title: "Snapgram – Debug Story",
       content: `
@@ -162,6 +186,28 @@ This tool removes a small but frequent friction point from my daily workflow.
   ],
 
   zh: [
+    {
+      slug: "gemini-chatbot-story",
+      title: "Gemini聊天機器人 — API 串接紀錄",
+      content: `
+Gemini Chatbot 是一個用來練習第三方 AI API 串接的全端專案，
+重點在於建立穩定的後端 API，並將使用者輸入轉換為 Gemini API 的請求與回應。
+
+主要挑戰：
+1. 建立後端 API 端點，負責轉送使用者 prompt 至 Gemini
+2. 規範請求與回應格式，確保前後端資料結構一致
+3. 確保 API 行為在本機與正式環境中保持一致
+
+在串接過程中發現：
+- Gemini SDK 的使用方式必須與實際安裝的套件版本完全對齊
+- API 金鑰若未正確設定，後端必須能安全地拒絕請求而非直接崩潰
+- AI API 回應時間不固定，後端需具備基本的錯誤與異常處理能力
+
+此專案的核心目標在於建立一個可重複使用、可部署的 AI API 整合流程。
+`,
+      github: "https://github.com/CatherineHsuDev/gemini-chatbot-demo-backend",
+      demo: "https://gemini-chatbot-demo-frontend.onrender.com",
+    },
     {
       slug: "snapgram-story",
       title: "Snapgram社群 — 開發紀錄",

@@ -47,6 +47,24 @@ export type ProjectItem = {
 export const projectItems: Dict<ProjectItem[]> = {
   en: [
     {
+      id: "gemini-chatbot",
+      title: "Gemini AI Chatbot",
+      description:
+        "A web-based AI chatbot integrated with Google Gemini, allowing users to send prompts and receive real-time AI responses. Built with React, TypeScript, and Vite on the frontend, and powered by a FastAPI backend for API handling and deployment flexibility.",
+      image: "/project/chatbot.png",
+      github: "https://github.com/CatherineHsuDev/gemini-chatbot-demo-backend",
+      story: "/portfolio/project/gemini-chatbot-story",
+      tags: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "FastAPI",
+        "Python",
+        "Google Gemini API",
+        "REST API",
+      ],
+    },
+    {
       id: "snapgram",
       title: "Snapgram Social App",
       description:
@@ -134,6 +152,24 @@ export const projectItems: Dict<ProjectItem[]> = {
   ],
 
   zh: [
+    {
+      id: "gemini-chatbot",
+      title: "Gemini AI 聊天機器人",
+      description:
+        "一個串接 Google Gemini 的 Web 聊天機器人，使用者可輸入問題並即時取得 AI 回應。前端使用 React、TypeScript 與 Vite 建立互動介面，後端以 FastAPI 建立 API，支援本機與雲端部署。",
+      image: "/project/chatbot.png",
+      github: "https://github.com/CatherineHsuDev/gemini-chatbot-demo-backend",
+      story: "/portfolio/project/gemini-chatbot-story",
+      tags: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "FastAPI",
+        "Python",
+        "Google Gemini API",
+        "REST API",
+      ],
+    },
     {
       id: "snapgram",
       title: "Snapgram 社交平台",
