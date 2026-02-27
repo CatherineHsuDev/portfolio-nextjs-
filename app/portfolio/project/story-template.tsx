@@ -31,6 +31,8 @@ export default function StoryTemplate({ slug }: StoryTemplateProps) {
 
   const [pdfOpen, setPdfOpen] = useState(false);
 
+  const hasDemo = story?.demo && story.demo !== "#";
+
   if (!story) {
     return (
       <section className="w-full bg-color-background">
@@ -61,7 +63,7 @@ export default function StoryTemplate({ slug }: StoryTemplateProps) {
             </Link>
           )}
 
-          {story.demo && (
+          {/* {story.demo && (
             <Link
               href={story.demo}
               target="_blank"
@@ -69,6 +71,23 @@ export default function StoryTemplate({ slug }: StoryTemplateProps) {
             >
               Demo / Website
             </Link>
+          )} */}
+          {hasDemo ? (
+            <Link
+              href={story.demo as string}
+              target="_blank"
+              className="inline-flex items-center rounded-full border border-gray-300 bg-white px-5 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50 transition"
+            >
+              Demo / Website
+            </Link>
+          ) : (
+            <button
+              type="button"
+              disabled
+              className="inline-flex items-center rounded-full border border-gray-200 bg-gray-100 px-5 py-2 text-sm font-medium text-gray-400 cursor-not-allowed opacity-60"
+            >
+              Demo / Website
+            </button>
           )}
         </div>
 
@@ -88,7 +107,7 @@ export default function StoryTemplate({ slug }: StoryTemplateProps) {
 
               <button
                 onClick={() => setPdfOpen(true)}
-                className="mt-4 inline-flex items-center rounded-full border border-gray-300  bg-blue-600 px-5 py-2 text-sm font-medium text-white hover:bg-blue-700 transition"
+                className="cursor-pointer mt-4 inline-flex items-center rounded-full border border-gray-300  bg-blue-600 px-5 py-2 text-sm font-medium text-white hover:bg-blue-700 transition"
               >
                 {ui.openPdf}
               </button>
@@ -128,7 +147,7 @@ export default function StoryTemplate({ slug }: StoryTemplateProps) {
             </Link>
           )}
 
-          {story.demo && (
+          {/* {story.demo && (
             <Link
               href={story.demo}
               target="_blank"
@@ -136,6 +155,23 @@ export default function StoryTemplate({ slug }: StoryTemplateProps) {
             >
               Demo / Website
             </Link>
+          )} */}
+          {hasDemo ? (
+            <Link
+              href={story.demo as string}
+              target="_blank"
+              className="inline-flex items-center rounded-full border border-gray-300 bg-white px-5 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50 transition"
+            >
+              Demo / Website
+            </Link>
+          ) : (
+            <button
+              type="button"
+              disabled
+              className="inline-flex items-center rounded-full border border-gray-200 bg-gray-100 px-5 py-2 text-sm font-medium text-gray-400 cursor-not-allowed opacity-60"
+            >
+              Demo / Website
+            </button>
           )}
         </div>
       </div>

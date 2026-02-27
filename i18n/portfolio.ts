@@ -47,6 +47,24 @@ export type ProjectItem = {
 export const projectItems: Dict<ProjectItem[]> = {
   en: [
     {
+      id: "gemini-chatbot",
+      title: "Gemini AI Chatbot",
+      description:
+        "A web-based AI chatbot integrated with Google Gemini, allowing users to send prompts and receive real-time AI responses. Built with React, TypeScript, and Vite on the frontend, and powered by a FastAPI backend for API handling and deployment flexibility.",
+      image: "/project/chatbot.png",
+      github: "https://github.com/CatherineHsuDev/gemini-chatbot-demo-backend",
+      story: "/portfolio/project/gemini-chatbot-story",
+      tags: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "FastAPI",
+        "Python",
+        "Google Gemini API",
+        "REST API",
+      ],
+    },
+    {
       id: "snapgram",
       title: "Snapgram Social App",
       description:
@@ -97,9 +115,61 @@ export const projectItems: Dict<ProjectItem[]> = {
         "Passport",
       ],
     },
+    {
+      id: "homework-pdf-tool",
+      title: "Photos-to-PDF Tool",
+      description:
+        "A lightweight tool designed for teachers to instantly merge multiple homework photos into a single PDF. Built with Next.js and supports PWA, allowing installation as a home-screen Web App.",
+      image: "/project/pdftool.png",
+      github: "https://github.com/CatherineHsuDev/images-to-pdf",
+      story: "/portfolio/project/homework-pdf-tool-story",
+      tags: [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Route Handlers API",
+        "pdf-lib",
+        "PWA",
+      ],
+    },
+    {
+      id: "image-cropper-tool",
+      title: "Image Cropping & Proportional Scaling Tool",
+      description:
+        "To avoid opening Photoshop just to resize an image, I built this lightweight cropping tool. Set the canvas size, drop in your image, hit “Fill Canvas,” and it's done — no manual resizing needed.",
+      image: "/project/crop-img.png",
+      github: "https://github.com/CatherineHsuDev/img-crop-tool",
+      story: "/portfolio/project/image-cropper-tool-story",
+      tags: [
+        "JavaScript",
+        "HTML Canvas",
+        "CSS",
+        "Image Processing",
+        "Drag & Resize",
+        "Custom Tools",
+      ],
+    },
   ],
 
   zh: [
+    {
+      id: "gemini-chatbot",
+      title: "Gemini AI 聊天機器人",
+      description:
+        "一個串接 Google Gemini 的 Web 聊天機器人，使用者可輸入問題並即時取得 AI 回應。前端使用 React、TypeScript 與 Vite 建立互動介面，後端以 FastAPI 建立 API，支援本機與雲端部署。",
+      image: "/project/chatbot.png",
+      github: "https://github.com/CatherineHsuDev/gemini-chatbot-demo-backend",
+      story: "/portfolio/project/gemini-chatbot-story",
+      tags: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "FastAPI",
+        "Python",
+        "Google Gemini API",
+        "REST API",
+      ],
+    },
     {
       id: "snapgram",
       title: "Snapgram 社交平台",
@@ -149,6 +219,40 @@ export const projectItems: Dict<ProjectItem[]> = {
         "JWT",
         "Google OAuth",
         "Passport",
+      ],
+    },
+    {
+      id: "homework-pdf-tool",
+      title: "作業照片一鍵轉 PDF 小工具",
+      description:
+        "為老師開發的教學小工具，支援多張照片上傳並自動合併成單一 PDF，使用 Next.js 構建，並支援 PWA，可加入手機主畫面當作 Web App。",
+      image: "/project/pdftool.png",
+      github: "https://github.com/CatherineHsuDev/pdftool.png",
+      story: "/portfolio/project/homework-pdf-tool-story",
+      tags: [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Route Handlers API",
+        "pdf-lib",
+        "PWA",
+      ],
+    },
+    {
+      id: "image-cropper-tool",
+      title: "圖片裁切與等比例縮放小工具",
+      description:
+        "為了省略開啟 Photoshop 改圖片尺寸的步驟，我做了一個圖片裁切工具。只要設定畫布大小、插入圖片，一鍵填滿畫布（Fill Canvas）就能完成，完全不用手動拉放大。",
+      image: "/project/crop-img.png",
+      github: "https://github.com/CatherineHsuDev/img-crop-tool",
+      story: "/portfolio/project/image-cropper-tool-story",
+      tags: [
+        "JavaScript",
+        "HTML Canvas",
+        "CSS",
+        "Image Processing",
+        "Drag & Resize",
+        "Custom Tools",
       ],
     },
   ],

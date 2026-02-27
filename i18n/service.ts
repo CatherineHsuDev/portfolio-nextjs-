@@ -27,7 +27,7 @@ export const serviceTranslations: Dict<{
         title: "Modern web applications end-to-end",
         desc: "React and Next.js interfaces, Node.js APIs, databases, cloud auth",
         link: "/portfolio/project", // ⭐ project 列表
-        imageSrc: "/project/database.png",
+        imageSrc: "/project/course.png",
         linkLabel: "Explore →",
       },
       {
@@ -43,7 +43,7 @@ export const serviceTranslations: Dict<{
         title: "Database and architecture foundations",
         desc: "Schema design, ERD modeling, relational structure planning, system workflows.",
         link: "/portfolio/project/ecommerce-story", // ⭐ Ecommerce
-        imageSrc: "/project/course.png",
+        imageSrc: "/project/database.png",
         linkLabel: "View work →",
       },
     ],
@@ -60,8 +60,7 @@ export const serviceTranslations: Dict<{
         title: "現代化全端 Web 應用程式",
         desc: "React、Next.js 介面、Node.js API、資料庫、雲端認證",
         link: "/portfolio/project", // ⭐ 和英文一樣
-        imageSrc: "/project/database.png",
-
+        imageSrc: "/project/course.png",
         linkLabel: "查看 →",
       },
       {
@@ -70,7 +69,6 @@ export const serviceTranslations: Dict<{
         desc: "重構、模組化、改善可維護性，讓系統更可延伸與穩定。",
         link: "/portfolio/project/snapgram-story",
         imageSrc: "/project/snapgram-3.png",
-
         linkLabel: "了解更多 →",
       },
       {
@@ -78,7 +76,7 @@ export const serviceTranslations: Dict<{
         title: "資料庫與架構規劃基礎",
         desc: "Schema 設計、ERD 建模、關聯規劃、系統流程思考。",
         link: "/portfolio/project/ecommerce-story",
-        imageSrc: "/project/course.png",
+        imageSrc: "/project/database.png",
         linkLabel: "查看作品 →",
       },
     ],

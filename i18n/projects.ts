@@ -1,3 +1,4 @@
+// Projects that matter at Home page
 // frontend/i18n/projects.ts
 import type { Dict } from "./types";
 
