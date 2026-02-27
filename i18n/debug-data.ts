@@ -10,6 +10,22 @@ export type StoryItem = {
 export const PROJECT_STORIES: Dict<StoryItem[]> = {
   en: [
     {
+      slug: "express-router-merge-params-missing-id",
+      title: "Fixing Empty req.params in Express Nested Routes",
+      content: `Issue:
+While posting to /matches/3/commentary via Postman, the Zod validation failed with "expected number, received NaN" for the match ID. Debugging revealed that req.params was an empty object {}, even though the ID was clearly present in the URL path. This prevented the backend from associating the commentary with the correct match.
+
+Cause:
+This is due to the default behavior of the Express Router regarding parameter inheritance. When a router is mounted on a path containing parameters (e.g., app.use("/matches/:id/commentary", router)), the child router cannot access those parent parameters by default. Each router instance maintains its own isolated scope for path segments.
+
+Fix:
+Enable the mergeParams option when initializing the router in the child module (commentary.js). By setting const router = express.Router({ mergeParams: true }), the child router is explicitly instructed to inherit and merge req.params from its parent middleware.
+
+Result:
+The req.params object now correctly retrieves { id: "3" }. Zod's z.coerce.number() successfully converts the string to an integer, allowing the validation to pass and the database transaction to complete successfully.`,
+    },
+
+    {
       slug: "tailwind-group-hover-not-working-with-custom-class",
       title: "Why group-hover Doesn't Apply Custom Classes in Tailwind",
       content: `Issue:
@@ -273,6 +289,21 @@ The left column now automatically matches the right column’s computed height (
   /* ------------------------- ZH VERSION ------------------------- */
 
   zh: [
+    {
+      slug: "express-router-merge-params-missing-id",
+      title: "修復 Express 子路由無法取得父路由參數（:id）的問題",
+      content: `狀況：
+在 Postman 呼叫 POST /matches/3/commentary 時，後端 Zod 驗證報錯「expected number, received NaN」。檢查 Console 發現 req.params 為空物件 {}，導致無法從路徑中取得 matchId。
+
+原因：
+這是 Express 的路由參數繼承機制所致。當 app.use("/matches/:id/commentary", commentaryRouter) 將路由掛載到包含參數的路徑時，預設情況下，子路由（commentaryRouter）無法存取父層定義的 :id 參數。
+
+處理方式：
+在子路由檔案（commentary.js）中，修改 Router 的初始化設定，加入 { mergeParams: true } 選項，強制子路由合併並繼承父層的路徑參數。
+
+處理結果：
+req.params 現在能正確取得 { id: "3" }。Zod 的 z.coerce.number() 順利將字串轉換為數字，驗證通過並成功將資料存入資料庫。`,
+    },
     {
       slug: "tailwind-group-hover-custom-class-variant-limit",
       title: "為什麼 group-hover 無法套用自訂 class？理解 Tailwind 變體的限制",
